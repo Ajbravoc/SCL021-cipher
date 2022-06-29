@@ -1,0 +1,45 @@
+
+body{
+    background-color: #F0EBE3;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.main-header{
+    background: #E4DCCF;
+    color:black;
+    padding: 20px;
+    text-align: center;
+    width: auto;
+}
+
+#Description{
+    color:black;
+    text-align: center;
+}
+
+#estructura {
+    background-color: red;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.estructuraDos {
+  background: white;
+  width: 350px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 250px;
+  padding: 50px;
+}
+
+footer{
+    display: flex;
+    color:blue;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+}
