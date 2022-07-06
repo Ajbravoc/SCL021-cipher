@@ -9,32 +9,48 @@
   <body>
     <div id="root">
       <header class="main-header">
-      <h1>Título</h1>
+      <h1>Codificador de contraseñas</h1>
     </header>
     </div>
 
-    <section id="Description">
-      <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore illum eius officia animi error at voluptate voluptas provident. </h3>
-</section>
+  
+   <div id="Description">
+    <p class = primero> Herramienta online para la creación de contraseñas seguras</p>
+   </div>
+ 
 
 <section id="estructura">
-          <main class="estructuraDos">Contraseña<br> Desplazamiento.</div>
-            <input type="text" name="nombre" />
-          <input type="number" id="input-number" />
-          <div id="cipherActions">
-            <button type="button" id="btn-cif">Cifrar</button>
-            <button type="button" id="btn-descif">Descifrar</button>
+          <main class="estructuraDos">
+<form action=""> 
+            <h1>Escribe tu contraseña aquí</h1> 
+          
+            <div>
+              <input type="text" id="message" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="message"/>
+
+            </div>
+             
         
-  </main>
-      </div>
-    </section>
+
+
+              <p style="font-size:12px">Las contraseñas deben tener entre 4 y 8 caracteres.</p>
+
+            <h3>Desplazamiento</h3>
+            <input type="number" id="desplazamiento" size="4"/>
+            <button type="button" id="encode">Cifrar/Descifrar</button>
+
+            <h3>Mensaje cifrado/descifrado</h3>
+            <input type="text" id="mensaje2"/>
+            
+          </form>
     </section>
     
     <script src="index.js" type="module"></script>
+
+
     <footer>
-      <p>© 2020 Anahí Bravo</p>
+      <p>© 2022 Anahí Bravo</p>
   </footer>
   </body>
 </html>
 
-<!--Link a archivo que esta en la misma computadora-->
+<!--para comentar-->

@@ -1,45 +1,57 @@
 
 body{
-    background-color: #F0EBE3;
+    background-color: #FFEDDB;
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
 .main-header{
-    background: #E4DCCF;
+    background: #E3B7A0;
     color:black;
+    font-size: 25px;
     padding: 20px;
     text-align: center;
     width: auto;
+    font-weight: bolder;
+    
 }
 
 #Description{
-    color:black;
+    
     text-align: center;
+    height: 0px;
+    padding: 20px;
 }
 
 #estructura {
-    background-color: red;
-  height: 600px;
+    
+  height: 580px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+#desplazamiento {
+    height: 20px;
+    width: 40px;
+}
+
+
 
 .estructuraDos {
   background: white;
   width: 350px;
   border: 1px solid gray;
   border-radius: 5px;
-  height: 250px;
-  padding: 50px;
+  height: 350px;
+  padding: 10px 30px 30px 30px ;
+
 }
 
 footer{
     display: flex;
-    color:blue;
     justify-content: center;
     padding: 5px;
-    background-color: #45a1ff;
-    color: #fff;
+    background-color: #FBF8F1;
+    color: rgb(0, 0, 0);
 }
