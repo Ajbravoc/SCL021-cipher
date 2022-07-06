@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Codificador de contraseñas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <header class="main-header">
-      <h1>Codificador de contraseñas</h1>
-    </header>
-    </div>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="index.js" type="module"></script>
+
+  <form>       
+   <h1>My Cipher machine</h1>   
+   <p id="titleId">Plain text</p>
   
-   <div id="Description">
-    <p class = primero> Herramienta online para la creación de contraseñas seguras</p>
+   <div>          
+     <input type="text" id="pass" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="message"/>
+           
+            
    </div>
- 
+  
+   <div>      
+    <label for="shift">Shift:</label>
+    <select id="shift" name="shift">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="5">5</option>
+     <option value="10">10</option>
+    </select> 
+  </div>
+   
+  <div>      
+    <input type="button" id="decrypt" 
+       value="Encrypt" 
+       onclick="encryptText();">
+    <input type="button" id="decrypt" 
+       value="Decrypt the text" 
+       onclick="decryptText();">    
+  </div>
+  
+  </form>
 
-<section id="estructura">
-          <main class="estructuraDos">
-<form action=""> 
-            <h1>Escribe tu contraseña aquí</h1> 
-          
-            <div>
-              <input type="text" id="message" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="message"/>
+ <!--
+This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
+-->
+<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
 
-            </div>
-             
-        
-
-
-              <p style="font-size:12px">Las contraseñas deben tener entre 4 y 8 caracteres.</p>
-
-            <h3>Desplazamiento</h3>
-            <input type="number" id="desplazamiento" size="4"/>
-            <button type="button" id="encode">Cifrar/Descifrar</button>
-
-            <h3>Mensaje cifrado/descifrado</h3>
-            <input type="text" id="mensaje2"/>
-
-          </form>
-    </section>
-    
-    <script src="index.js" type="module"></script>
-
-
-    <footer>
-      <p>© 2022 Anahí Bravo</p>
-  </footer>
-  </body>
 </html>
-
-<!--para comentar-->

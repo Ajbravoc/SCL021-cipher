@@ -1,53 +1,64 @@
-import cipher from './cipher.js';
+const alphabet = [
+    'A','B','C','D','E','F',
+    'G','H','I','J','K','L',
+    'M','N','O','P','Q','R',
+    'S','T','U','V','W','X',
+    'Y','Z' 
+];
+  
+function encryptText() {
 
- const parrafo_primero = document.querySelector("#Description p.primero");
-parrafo_primero.style.color = "dark-gray";
+const form = document.forms[0];
 
+let title=
+ document.getElementById("titleId");  
+   
+title.innerHTML = "Encrypted text";
 
-window.addEventListener("load", inicio, true);
-function inicio(){
-    document.getElementById("message").addEventListener("keyup", function(){
-        this.value = this.value.toUpperCase();
-    });
+let shift= Number(form.shift.value); 
+   
+let pass =  
+  form.pass.value;       
+   
+form.pass.value 
+  = [... pass ].map(char =>
+    encrypt(char, shift)).join('');
 }
+  
+function decryptText() {
+const form = document.forms[0];
+let title = document.getElementById("titleId");       
 
-document.getElementById("encode").addEventListener("click", function(){
-    let texto = document.getElementById("message").value;
-    const desplazamiento = document.getElementById("desplazamiento").value;
-    document.getElementById("mensaje2").value = cifrar(texto, desplazamiento);
-}, true);
-
-document.getElementById("decode").addEventListener("click", function(){
-    let texto = document.getElementById("message").value;
-    let desplazamiento = document.getElementById("desplazamiento").value = descifrar(texto,desplazamiento);
-},true);
-
-function cifrar(texto,desplazamiento){
-let resultado = "";
-let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-desplazamiento=(desplazamiento % 26 + 26) % 26;
-
-if (texto){
-    for (let i = 0; i<texto.length; i++){
-        if (letras.indexOf(texto[i])!=-1){
-            let posicion = ((letras.indexOf(texto[i])+desplazamiento)%26);
-            resultado += letras[posicion];
-        }
-        else
-        resultado += texto [i];
-    }
+title.innerHTML = "Plain text";
+     
+let shift =   
+  Number(form.shift.value);
+let pass = 
+  form.pass.value;    
+   
+shift = 
+   (alphabet.length - shift) %  
+    alphabet.length;
+  
+form.pass.value 
+    = [... pass ].map(char => 
+      encrypt(char,    
+      shift)).join('');
 }
-return resultado;
-}
-
-function cifrar2 (texto,desplazamiento){
-    if (!texto)
-    return "";
-    const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    desplazamiento = (desplazamiento % 26 + 26) % 26;
-    return texto.replace (/[A-Z]/ig, c=> [(letras.indexOf(c)+desplazamiento)%26]);
-
-}
-
-console.log(cipher);
+  
+function encrypt(char, shift) {
+let include =        
+ alphabet.includes(
+  char.toUpperCase()); 
+   
+if (include){      
+ let position =         
+  alphabet.indexOf(
+   char.toUpperCase());
+    
+let newPosition = 
+  (position+shift) %  
+    alphabet.length;
+return alphabet[newPosition];
+}else  return char;
+}        
