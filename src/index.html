@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Codificador de contraseñas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Montserrat&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
 <body>
-  <script src="index.js" type="module"></script>
 
-  <form>       
-   <h1>My Cipher machine</h1>   
-   <p id="titleId">Plain text</p>
+<header class="header"> <!-- Área menú de nav-->
+          <div class="navBar"> <!-- Interior de área de menú de nav-->
+          <div class="logo"> <!-- sección logo-->
+          <a href="index.html"> Passure</a>
+        </div>
+
+        <nav class="nav"> <!-- Navegación-->
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+</header>
   
-   <div>          
-     <input type="text" id="pass" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="message"/>
-           
-            
-   </div>
-  
-   <div>      
-    <label for="shift">Shift:</label>
-    <select id="shift" name="shift">
-     <option value="1">1</option>
-     <option value="2">2</option>
-     <option value="5">5</option>
-     <option value="10">10</option>
-    </select> 
+<section class="form"> <!--Contenedor formulario -->   
+        <form> 
+        <div class="formText">
+            <h1>Maximiza tu seguridad</h1> 
+          <br>
+          <br>
+        <div> <!--Contenedor del contenedor del formulario -->   
+              <label for="Contraseña">Contraseña</label>
+              <input type="text" id="PasswordText"  maxlength="8" oninput="if(this.value.length>this.maxLength) 
+              this.value = this.value.slice(0, this.maxLength)"";/>
+              
+               <p>Las contraseñas deben tener entre 4 y 8 caracteres.</p>
+          <br>
+              <label for="Clave">Clave</label> <!--Arreglar -->   
+              <input type="number" id="desplazamiento"/>
+            <button type="button" id="BtnCipher">Cifrar</button>
+          <br>
+          <br>
+          <br>
+             <label for="Contraseña segura">Contraseña segura</label>
+             <input type="text" id="PasswordCipher">
+          <br>
+          <br>
+            <p><button type="button" id='BtnCopy'>Copiar</button></p>
+          </form>
+        
+    </section>
   </div>
-   
-  <div>      
-    <input type="button" id="decrypt" 
-       value="Encrypt" 
-       onclick="encryptText();">
-    <input type="button" id="decrypt" 
-       value="Decrypt the text" 
-       onclick="decryptText();">    
   </div>
-  
-  </form>
+    <script src="index.js" type="module"></script>
 
- <!--
-This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
--->
-<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-</body>
-
+    <footer>
+      <p>© 2022 Anahí Bravo</p>
+  </footer>
+  </body>
 </html>
+
+<!--para comentar-->
+
