@@ -15,5 +15,3 @@ retornado el valor con el despl. modificado*/
 // IndexOf retorna el primer índice que se puede encontrar en un elemento dado //
 
 export default cipher;
-
-
