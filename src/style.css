@@ -4,19 +4,25 @@
     box-sizing: border-box;
   }
 
-  body{
+ #root{
     background-color: #D6D8DE;
+    height: 100vh;
   }
 
-  .contenedor-padre{
+ .contenedor-padre{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+   
  }
 
+
+
  .contenedor-hijo{
-    display: flex;
+   display: flex;
+   align-items: center;
+   justify-content: center;
     width: 120vh;
     height: 80vh;
     background-color: white;
@@ -24,34 +30,63 @@
    
  }
 
- #imagen{
-    height: 50vh;
-    display: flex;
-    justify-content: flex-start;
-    margin: 14% 0 14% 0%;
+ .divImgContainer{
+   height: 55vh;
+   width: 120vh;
+   display: flex;
+   justify-content: flex-start;
+   margin: 20% 0 10% 0%;
+ }
+ .imgContainer{
+   width: 61vh;
+   height: 50vh;
  }
 
- #contenedor-funcionalidad{
+ .contenedorFunciones{
     height: 80vh;
-    width: 80vh;
+    width: 115vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5%;
+ }
+
+ .contenedorTitulos{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   height: 20vh;
+   width: 44vh;
  }
 
  h1{
    font-family: 'Orbitron', sans-serif;
    color: #205295;
    letter-spacing: 3px;
+   margin-top: 8vh;
  }
 
 h2{
    font-family: 'Lekton', sans-serif;
    color: #6A88A4;
    letter-spacing: 3px;
+   margin-top: 2vh;
 }
 
+
+/*Formulario del login*/
+.form {
+   height: 71%;
+   width: 100%;
+   margin-top: 8%;
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+   background-color: green;
+ }
+ 
+ 
+ 
+ 
 
 /* otra manera para centrar un div : display: grid;
 place-items: center;*/

@@ -1,3 +1,6 @@
+
+
+
 const cipher = {
   
   cifrar:(texto, desplazamiento) =>{ //propiedad cifrar tiene los parámetros texto y despla//
