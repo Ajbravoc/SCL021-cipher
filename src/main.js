@@ -41,27 +41,59 @@ contenedorHijo.appendChild(contenedorFunciones);
   subTitulo.textContent = "Maximiza tu seguridad";
   contenedorTitulos.appendChild(subTitulo);
 
+   //Contenedor form
+ const contenedorForm = document.createElement("div");
+ contenedorForm.classList.add("contenedorForm");
+ contenedorFunciones.appendChild(contenedorForm);
+
 // Create a form dynamically
 var form = document.createElement("form");
 form.setAttribute("method", "post");
 form.setAttribute("action", "submit.php");
-contenedorFunciones.appendChild(form);
+contenedorForm.appendChild(form);
 
-// Create an input element for Full Name
-var FN = document.createElement("input");
-FN.setAttribute("type", "text");
-FN.setAttribute("name", "FullName");
-FN.setAttribute("placeholder", "Full Name");
-contenedorFunciones.appendChild(FN);
+
+  //Titulo contraseña
+  const rellenarContraseña = document.createElement("p");
+  rellenarContraseña.textContent = "Escribe tu contraseña";
+  contenedorForm.appendChild(rellenarContraseña);
+
+// Sección contraseña
+var contraseña = document.createElement("input");
+contraseña.classList.add("contraseña");
+contraseña.setAttribute("type", "text");
+contraseña.setAttribute("name", "FullName");
+contenedorForm.appendChild(contraseña);
+
+  //Detalle de contraseña
+  const instruContra = document.createElement("h5");
+ instruContra.textContent = "La contraseña debe tener entre 4 y 8 caracteres";
+  contenedorForm.appendChild(instruContra);
 
   // create a submit button
   var botonCifrar = document.createElement("input");
+  botonCifrar.classList.add("botonCifrar");
   botonCifrar.setAttribute("type", "submit");
   botonCifrar.setAttribute("value", "Cifrar");
-  contenedorFunciones.appendChild(botonCifrar);
+  contenedorForm.appendChild(botonCifrar);
+
+  //Titulo contraseña
+  const ContraSegura = document.createElement("p");
+ ContraSegura.textContent = "Contraseña segura";
+  contenedorForm.appendChild(ContraSegura);
+
+
+// Create an input element for Full Name
+var contraSeg = document.createElement("input");
+contraSeg.classList.add("contraseñaSeg");
+contraSeg.setAttribute("type", "text");
+contraSeg.setAttribute("name", "FullName");
+contenedorForm.appendChild(contraSeg);
+
 
   // create a submit button
   var s = document.createElement("input");
+  s.classList.add("s");
   s.setAttribute("type", "submit");
   s.setAttribute("value", "Copiar");
-  contenedorFunciones.appendChild(s);
+  contenedorForm.appendChild(s);
