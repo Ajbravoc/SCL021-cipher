@@ -60,22 +60,44 @@ contenedorForm.appendChild(form);
 
 // Sección contraseña
 var contraseña = document.createElement("input");
-contraseña.classList.add("contraseña");
+contraseña.classList.add("contrasenia");
 contraseña.setAttribute("type", "text");
 contraseña.setAttribute("name", "FullName");
 contenedorForm.appendChild(contraseña);
+
+
+
 
   //Detalle de contraseña
   const instruContra = document.createElement("h5");
  instruContra.textContent = "La contraseña debe tener entre 4 y 8 caracteres";
   contenedorForm.appendChild(instruContra);
 
+
+ //Contenedor clave y botones
+ const contenedorClave = document.createElement("div");
+ contenedorClave.classList.add("contenedorClave");
+ contenedorForm.appendChild(contenedorClave);
+
+    //Titulo clave
+    const clave = document.createElement("p");
+   clave.textContent = "Clave";
+    contenedorClave.appendChild(clave);
+
+      // Boton cifrado con numeros
+  var cifrado = document.createElement("input");
+  cifrado.classList.add("cifrado");
+  cifrado.setAttribute("id", "desplazamiento");
+  cifrado.setAttribute("type", "number");
+  cifrado.setAttribute("value", "0");
+  contenedorClave.appendChild(cifrado);
+
   // create a submit button
   var botonCifrar = document.createElement("input");
   botonCifrar.classList.add("botonCifrar");
   botonCifrar.setAttribute("type", "submit");
   botonCifrar.setAttribute("value", "Cifrar");
-  contenedorForm.appendChild(botonCifrar);
+  contenedorClave.appendChild(botonCifrar);
 
   //Titulo contraseña
   const ContraSegura = document.createElement("p");
@@ -85,7 +107,7 @@ contenedorForm.appendChild(contraseña);
 
 // Create an input element for Full Name
 var contraSeg = document.createElement("input");
-contraSeg.classList.add("contraseñaSeg");
+contraSeg.classList.add("contraseniaSeg");
 contraSeg.setAttribute("type", "text");
 contraSeg.setAttribute("name", "FullName");
 contenedorForm.appendChild(contraSeg);
