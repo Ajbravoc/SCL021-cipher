@@ -17,7 +17,7 @@ contenedorPadre.appendChild(contenedorHijo);
 
  const imgContainer = document.createElement("img");
  imgContainer.classList.add("imgContainer");
- imgContainer.setAttribute("src", "/safe-pic.png");
+ imgContainer.setAttribute("src", "/security-pic.png");
  divImgContainer.appendChild(imgContainer);
 
  //Contenedor funcionalidad
@@ -41,36 +41,53 @@ contenedorHijo.appendChild(contenedorFunciones);
   subTitulo.textContent = "Maximiza tu seguridad";
   contenedorTitulos.appendChild(subTitulo);
 
-   //Contenedor form
+//Contenedor form
  const contenedorForm = document.createElement("div");
  contenedorForm.classList.add("contenedorForm");
  contenedorFunciones.appendChild(contenedorForm);
 
-// Create a form dynamically
+// Formulario
 var form = document.createElement("form");
 form.setAttribute("method", "post");
 form.setAttribute("action", "submit.php");
 contenedorForm.appendChild(form);
 
 
-  //Titulo contraseña
-  const rellenarContraseña = document.createElement("p");
-  rellenarContraseña.textContent = "Escribe tu contraseña";
-  contenedorForm.appendChild(rellenarContraseña);
+//Titulo contrasenia
+const rellenarContraseña = document.createElement("p");
+rellenarContraseña.textContent = "Escribe tu contraseña";
+contenedorForm.appendChild(rellenarContraseña);
 
-// Sección contraseña
-var contraseña = document.createElement("input");
-contraseña.classList.add("contrasenia");
-contraseña.setAttribute("type", "text");
-contraseña.setAttribute("name", "FullName");
-contenedorForm.appendChild(contraseña);
+// Input contraseña
+const contrasenia = document.createElement("input");
+contrasenia.classList.add("contrasenia");
+contrasenia.setAttribute("id", "password");
+contrasenia.setAttribute("type", "password");
+contenedorForm.appendChild(contrasenia);
+
+const img = document.createElement("img");
+img.setAttribute("id", "boton");
+img.setAttribute("src", "/cerrar-ojo.png");
+img.alt = "ojo cerrado";
+contenedorForm.appendChild(img);
+
+let inputContrasenia = contrasenia;
+let iconOjo = img;
+iconOjo.addEventListener("click", mostrarContrasena);
+function mostrarContrasena(){
+  if (inputContrasenia.type == "password"){
+    inputContrasenia.type = "text";
+  img.setAttribute("src", "/mostrar-ojo.png"); 
+  }else {
+    inputContrasenia.type = "password";
+     img.setAttribute("src", "/cerrar-ojo.png");
+  }
+}
 
 
-
-
-  //Detalle de contraseña
+  //Detalle de contrasenia
   const instruContra = document.createElement("h5");
- instruContra.textContent = "La contraseña debe tener entre 4 y 8 caracteres";
+ instruContra.textContent = "La contrasenia debe tener entre 4 y 8 caracteres";
   contenedorForm.appendChild(instruContra);
 
 
@@ -87,19 +104,19 @@ contenedorForm.appendChild(contraseña);
       // Boton cifrado con numeros
   var cifrado = document.createElement("input");
   cifrado.classList.add("cifrado");
-  cifrado.setAttribute("id", "desplazamiento");
+  cifrado.setAttribute("id", "password");
   cifrado.setAttribute("type", "number");
-  cifrado.setAttribute("value", "0");
+
   contenedorClave.appendChild(cifrado);
 
-  // create a submit button
+  // Boton cifrar
   var botonCifrar = document.createElement("input");
   botonCifrar.classList.add("botonCifrar");
   botonCifrar.setAttribute("type", "submit");
   botonCifrar.setAttribute("value", "Cifrar");
   contenedorClave.appendChild(botonCifrar);
 
-  //Titulo contraseña
+  //Titulo contrasenia
   const ContraSegura = document.createElement("p");
  ContraSegura.textContent = "Contraseña segura";
   contenedorForm.appendChild(ContraSegura);
@@ -109,13 +126,73 @@ contenedorForm.appendChild(contraseña);
 var contraSeg = document.createElement("input");
 contraSeg.classList.add("contraseniaSeg");
 contraSeg.setAttribute("type", "text");
-contraSeg.setAttribute("name", "FullName");
 contenedorForm.appendChild(contraSeg);
 
+ //Contenedor Botones finales 
+ const contenedorBtns = document.createElement("div");
+ contenedorBtns.classList.add("contenedorBtns");
+ contenedorForm.appendChild(contenedorBtns);
 
-  // create a submit button
+  // Boton Copiar
   var s = document.createElement("input");
   s.classList.add("s");
   s.setAttribute("type", "submit");
   s.setAttribute("value", "Copiar");
-  contenedorForm.appendChild(s);
+  contenedorBtns.appendChild(s);
+
+
+  // Boton Limpiar
+  var limpiar = document.createElement("input");
+  limpiar.classList.add("limpiar");
+  limpiar.setAttribute("type", "reset");
+  limpiar.setAttribute("value", "Limpiar");
+  contenedorBtns.appendChild(limpiar);
+
+
+  limpiar.onclick = () => {
+    contrasenia.value = "";
+    contraSeg.value = "";
+    cifrado.id = ""
+  };
+
+ const cipher = {
+    cifrar:(texto, desplazamiento) =>{ //propiedad cifrar tiene los parámetros contrasenia y despla//
+      const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       cifrado = (desplazamiento % 26 + 26) %26; //fórmula cipher para desplazarse, 26 letras del alfabeto
+      return texto.replace(/[A-Z]/ig, c=> letras[(letras.indexOf(c)+desplazamiento)%26]);    
+  }
+  }
+
+ botonCifrar.addEventListener("click", function(){ //LLama a BtnCipher//
+  let texto =contrasenia.value; //Llama al contrasenia//
+  let desplazamiento = cifrado.value;
+contraSeg.value = cipher.cifrar(texto,desplazamiento); //Llama al PasswordCipher donde llama a la const cipher.cifrar para que desplace//
+}, true);
+
+   // Funcionamiento botones
+   s.addEventListener( "click" , () =>{
+    contraSeg.select(); //Select hace focus al campo y el copy lo mueve al portapapeles
+    document.execCommand("copy"); //   
+      alert("Tu mensaje ha sido copiado!");
+  });  
+
+
+  // Faltan
+  1. Modularizar
+  2. Terminar funcionalidades
+      Ingresar img ojo en los passwords inputs 
+      Al hacer click en limpiar que se limpie la clave
+      Que cifre de más de uno 
+ 
+
+ contrasenia.addEventListener("keyup", function(){ //Llama al Id contrasenia desde el html//
+      this.value = this.value.toUpperCase(); //Le estamos dando la funcion de poner en mayusculas el mensaje que se esta ingresando
+  },true);
+
+
+
+
+
+
+
+
