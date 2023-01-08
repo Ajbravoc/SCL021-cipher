@@ -1,5 +1,5 @@
-import cipher from "./cipher-function.js";
-import { ojoMov, inicio, botonLimpiar } from "./form-functions.js";
+
+import { ojoMov, inicio, botonLimpiar, botonCipher, botonCopiar } from "./form-functions.js";
 
 
 const root = document.getElementById("root");
@@ -95,14 +95,14 @@ clave.textContent = "Clave";
 contenedorClave.appendChild(clave);
 
 // Input cifrado con numeros
-export var cifrado = document.createElement("input");
+export let cifrado = document.createElement("input");
 cifrado.classList.add("inputCifrado");
 cifrado.setAttribute("type", "number");
 cifrado.setAttribute("id", "cifrado");
 contenedorClave.appendChild(cifrado);
 
 // Boton cifrar
-var botonCifrar = document.createElement("input");
+export let botonCifrar = document.createElement("input");
 botonCifrar.classList.add("botonCifrar");
 botonCifrar.setAttribute("type", "submit");
 botonCifrar.setAttribute("value", "Cifrar");
@@ -125,50 +125,27 @@ contenedorBtns.classList.add("contenedorBtns");
 contenedorForm.appendChild(contenedorBtns);
 
 // Boton Copiar
-var btnCopiar = document.createElement("input");
+export let btnCopiar = document.createElement("input");
 btnCopiar.classList.add("btnCopiar");
 btnCopiar.setAttribute("type", "submit");
 btnCopiar.setAttribute("value", "Copiar");
 contenedorBtns.appendChild(btnCopiar);
 
 // Boton Limpiar
-export var btnLimpiar = document.createElement("input");
+export let btnLimpiar = document.createElement("input");
 btnLimpiar.classList.add("btnLimpiar");
 btnLimpiar.setAttribute("type", "reset");
 btnLimpiar.setAttribute("value", "Limpiar");
 contenedorBtns.appendChild(btnLimpiar);
 
-//Problemas al modularizarlo
-// btnLimpiar.onclick = () => {
-//   password.value = "";
-//   PassCiphered.value = "";
-//   cifrado.value = "onreset";
-// };
-
-botonCifrar.addEventListener(
-  "click",
-  function () {
-    //LLama a BtnCipher//
-    let texto = password.value; //Llama al password//
-    let desplazamiento = cifrado.value;
-    PassCiphered.value = cipher(texto, desplazamiento); //Llama al PasswordCipher donde llama a la const cipher.cifrar para que desplace//
-  },
-  true
-);
-
-// Funcionamiento botones
-btnCopiar.addEventListener("click", () => {
-  PassCiphered.select(); //Select hace focus al campo y el copy lo mueve al portapapeles
-  document.execCommand("copy"); //
-  alert("Tu mensaje ha sido copiado!");
-});
-
 export default (password, img);
 ojoMov();
 inicio();
 botonLimpiar();
+botonCipher();
+botonCopiar();
+
 
 // Faltan
-// 1. Modularizar
 // 2. Terminar funcionalidades
 //     Ingresar img ojo en los passwords inputs
