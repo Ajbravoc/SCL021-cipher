@@ -111,7 +111,7 @@ h2{
    margin: 2% 0% 4% 0;
 
  }
- .contrasenia, .contraseniaSeg{
+.password, .passCiphered{
    width: 95%;
    padding: 3% 0 2% 0;
   background: none;
@@ -127,7 +127,7 @@ h2{
    align-items: center;
    margin-bottom: 3%;
  }
-  .cifrado{
+  .inputCifrado{
    height: 55%;
    width: 14%;
    border-radius: 5px;
@@ -156,7 +156,7 @@ h2{
   flex-direction: row;
   justify-content: space-around;
  }
- .s, .limpiar{
+ .btnCopiar, .btnLimpiar{
   height: 63%;
   width: 37%;
    margin-top: 5%;
