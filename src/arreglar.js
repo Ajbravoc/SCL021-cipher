@@ -1,4 +1,4 @@
-import cipher from './cipher.js';
+import cipher from './cipher-function.js';
 
 window.addEventListener("load", inicio, true);
 
