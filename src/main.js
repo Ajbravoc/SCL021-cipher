@@ -135,7 +135,7 @@ contenedorForm.appendChild(PassCiphered);
 
   // Boton Copiar
   var btnCopiar = document.createElement("input");
-  btnCopiar.classList.add("s");
+  btnCopiar.classList.add("btnCopiar");
   btnCopiar.setAttribute("type", "submit");
   btnCopiar.setAttribute("value", "Copiar");
   contenedorBtns.appendChild(btnCopiar);
