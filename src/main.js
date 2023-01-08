@@ -1,5 +1,6 @@
 import cipher from "./cipher-function.js";
-import { ojoMov, inicio } from "./form-functions.js";
+import { ojoMov, inicio, botonLimpiar } from "./form-functions.js";
+
 
 const root = document.getElementById("root");
 
@@ -138,11 +139,11 @@ btnLimpiar.setAttribute("value", "Limpiar");
 contenedorBtns.appendChild(btnLimpiar);
 
 //Problemas al modularizarlo
-btnLimpiar.onclick = () => {
-  password.value = "";
-  PassCiphered.value = "";
-  cifrado.value = "onreset";
-};
+// btnLimpiar.onclick = () => {
+//   password.value = "";
+//   PassCiphered.value = "";
+//   cifrado.value = "onreset";
+// };
 
 botonCifrar.addEventListener(
   "click",
@@ -165,6 +166,7 @@ btnCopiar.addEventListener("click", () => {
 export default (password, img);
 ojoMov();
 inicio();
+botonLimpiar();
 
 // Faltan
 // 1. Modularizar
