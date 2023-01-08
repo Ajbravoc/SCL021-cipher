@@ -1,5 +1,5 @@
 import cipher from "./cipher-function.js";
-import ojoMov from "./form-functions.js";
+import { ojoMov, inicio } from "./form-functions.js";
 
 const root = document.getElementById("root");
 
@@ -94,7 +94,7 @@ clave.textContent = "Clave";
 contenedorClave.appendChild(clave);
 
 // Input cifrado con numeros
-var cifrado = document.createElement("input");
+export var cifrado = document.createElement("input");
 cifrado.classList.add("inputCifrado");
 cifrado.setAttribute("type", "number");
 cifrado.setAttribute("id", "cifrado");
@@ -113,7 +113,7 @@ tituloPass.textContent = "Contraseña segura";
 contenedorForm.appendChild(tituloPass);
 
 //Input contraseña codificada
-let PassCiphered = document.createElement("input");
+export let PassCiphered = document.createElement("input");
 PassCiphered.classList.add("passCiphered");
 PassCiphered.setAttribute("type", "text");
 contenedorForm.appendChild(PassCiphered);
@@ -131,41 +131,30 @@ btnCopiar.setAttribute("value", "Copiar");
 contenedorBtns.appendChild(btnCopiar);
 
 // Boton Limpiar
-var btnLimpiar = document.createElement("input");
+export var btnLimpiar = document.createElement("input");
 btnLimpiar.classList.add("btnLimpiar");
 btnLimpiar.setAttribute("type", "reset");
 btnLimpiar.setAttribute("value", "Limpiar");
 contenedorBtns.appendChild(btnLimpiar);
 
-// btnLimpiar.onclick = () => {
-//   password.value = "";
-//   PassCiphered.value = "";
-//   cifrado.value = "onreset";
-// };
+//Problemas al modularizarlo
+btnLimpiar.onclick = () => {
+  password.value = "";
+  PassCiphered.value = "";
+  cifrado.value = "onreset";
+};
 
-window.addEventListener("load", inicio, true);
+botonCifrar.addEventListener(
+  "click",
+  function () {
+    //LLama a BtnCipher//
+    let texto = password.value; //Llama al password//
+    let desplazamiento = cifrado.value;
+    PassCiphered.value = cipher(texto, desplazamiento); //Llama al PasswordCipher donde llama a la const cipher.cifrar para que desplace//
+  },
+  true
+);
 
-function inicio() {
-  password.addEventListener(
-    "keyup",
-    function () {
-      //Llama al Id password desde el html//
-      this.value = this.value.toUpperCase(); //Le estamos dando la funcion de poner en mayusculas el mensaje que se esta ingresando
-    },
-    true
-  );
-
-  botonCifrar.addEventListener(
-    "click",
-    function () {
-      //LLama a BtnCipher//
-      let texto = password.value; //Llama al password//
-      let desplazamiento = cifrado.value;
-      PassCiphered.value = cipher(texto, desplazamiento); //Llama al PasswordCipher donde llama a la const cipher.cifrar para que desplace//
-    },
-    true
-  );
-}
 // Funcionamiento botones
 btnCopiar.addEventListener("click", () => {
   PassCiphered.select(); //Select hace focus al campo y el copy lo mueve al portapapeles
@@ -175,6 +164,7 @@ btnCopiar.addEventListener("click", () => {
 
 export default (password, img);
 ojoMov();
+inicio();
 
 // Faltan
 // 1. Modularizar
