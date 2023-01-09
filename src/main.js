@@ -1,7 +1,6 @@
 
 import { ojoMov, inicio, botonLimpiar, botonCipher, botonCopiar } from "./form-functions.js";
 
-
 const root = document.getElementById("root");
 
 //Contenedor principal
@@ -56,9 +55,9 @@ form.setAttribute("action", "submit.php");
 contenedorForm.appendChild(form);
 
 //Titulo escribe contraseña
-const rellenarContraseña = document.createElement("p");
-rellenarContraseña.textContent = "Escribe tu contraseña";
-contenedorForm.appendChild(rellenarContraseña);
+const escribeContraseña = document.createElement("p");
+escribeContraseña.textContent = "Escribe tu contraseña";
+contenedorForm.appendChild(escribeContraseña);
 
 // Input contraseña
 export const password = document.createElement("input");
@@ -67,10 +66,12 @@ password.setAttribute("id", "password");
 password.setAttribute(
   "type",
   "password",
-  "oninput = if(this.value.length>this.maxLength)this.value = this.value.slice(0, this.maxLength)"
 );
 password.setAttribute("maxlength", "8");
+password.setAttribute("minlength", "4");
 contenedorForm.appendChild(password);
+
+
 
 //Ojo contraseña
 export const img = document.createElement("img");
@@ -81,7 +82,7 @@ contenedorForm.appendChild(img);
 
 //Detalle de password
 const instruContra = document.createElement("h5");
-instruContra.textContent = "La password debe tener entre 4 y 8 caracteres";
+instruContra.textContent = "La contraseña debe tener entre 4 y 8 caracteres";
 contenedorForm.appendChild(instruContra);
 
 //Contenedor padre clave y botones
@@ -146,6 +147,3 @@ botonCipher();
 botonCopiar();
 
 
-// Faltan
-// 2. Terminar funcionalidades
-//     Ingresar img ojo en los passwords inputs
