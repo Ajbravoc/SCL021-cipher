@@ -20,7 +20,7 @@ contenedorHijo.appendChild(divImgContainer);
 
 const imgContainer = document.createElement("img");
 imgContainer.classList.add("imgContainer");
-imgContainer.setAttribute("src", "/security-pic.png");
+imgContainer.setAttribute("src", "imgs/security-pic.png");
 divImgContainer.appendChild(imgContainer);
 
 //Contenedor funcionalidad
@@ -60,7 +60,7 @@ escribeContraseña.textContent = "Escribe tu contraseña";
 contenedorForm.appendChild(escribeContraseña);
 
 // Input contraseña
-export const password = document.createElement("input");
+export const password = document.createElement("input"); //cmd + click sobre el nombre me lleva al origen 
 password.classList.add("password");
 password.setAttribute("id", "password");
 password.setAttribute(
@@ -72,11 +72,10 @@ password.setAttribute("minlength", "4");
 contenedorForm.appendChild(password);
 
 
-
 //Ojo contraseña
 export const img = document.createElement("img");
 img.setAttribute("id", "boton");
-img.setAttribute("src", "/cerrar-ojo.png");
+img.setAttribute("src", "imgs/cerrar-ojo.png");
 img.alt = "ojo cerrado";
 contenedorForm.appendChild(img);
 
