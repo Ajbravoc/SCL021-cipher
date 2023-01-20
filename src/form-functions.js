@@ -2,8 +2,6 @@ import {img, password} from "./main.js";
 import { PassCiphered,cifrado, btnLimpiar, botonCifrar, btnCopiar } from "./main.js";
 import cipher from "./cipher-function.js";
 
-// import {cipher } from "../node_modules/cipher-anahi/index.js"
-// let cipher = require ("cipher-anahi");
 
 //Función que transforma en mayuscula el valor ingresado en el input text
 export function inicio() {
@@ -69,8 +67,6 @@ export function botonCopiar (){
     alert("Tu mensaje ha sido copiado!");
   });
 }
-
-
 
 
 // export { el nombre de cada función, variable, obj ,arreglo }
