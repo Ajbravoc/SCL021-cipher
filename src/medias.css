@@ -1,0 +1,93 @@
+
+@media (max-width: 480px) {
+  
+   #root{
+      background-color: #D6D8DE;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+  .contenedor-padre {
+  
+   height: 116vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-hijo {
+      
+   height: 95vh;
+   flex-direction: column;
+   position: absolute;
+   align-items: center;
+  }
+
+
+  .divImgContainer {
+  display: none;
+ }
+
+ .contenedorFunciones{
+   height: 95vh;
+   display: flex;
+}
+
+.contenedorTitulos{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 20vh;
+   width: 50vh;
+   margin: 2% 0 8% 0;
+ }
+
+ h1{
+   font-family: 'Orbitron', sans-serif;
+   color: #205295;
+   letter-spacing: 3px;
+   margin-top: 9vh;
+   font-size: 5vh;
+ }
+
+h2{
+   font-family: 'Lekton', sans-serif;
+   color: #6A88A4;
+   letter-spacing: 5px;
+   margin-top: 2vh;
+   font-size: 2.5vh;
+}
+
+.contenedorBtns{
+   width: 100%;
+   display: flex;
+   flex-direction: column-reverse;
+   align-content: space-around;
+   flex-wrap: wrap;
+}
+
+
+.password, .passCiphered{
+   width: 95%;
+   padding: 3% 0 2% 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #6a88a4;
+  outline: 0px;
+ }
+
+.btnCopiar, .btnLimpiar{
+     height: 46%;
+    width: 37%;
+    margin-top: 9%;
+    border-radius: 40px;
+    border: none;
+    color: #ffffff;
+    background-color: #6a88a4;
+    font-family: outfit;
+    font-size: larger;
+    padding: 1%;
+  }
+} 
