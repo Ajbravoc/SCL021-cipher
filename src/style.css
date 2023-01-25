@@ -46,7 +46,7 @@ height: 10%;
 
  .contenedorFunciones{
     height: 80vh;
-    width: 115vh;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;

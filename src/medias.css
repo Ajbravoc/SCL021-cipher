@@ -37,10 +37,12 @@
   display: none;
  }
 
- .contenedorFunciones{
+ /* .contenedorFunciones{
    height: 95vh;
    display: flex;
-}
+   flex-direction: column;
+    align-items: center;
+} */
 
 .contenedorTitulos{
    display: flex;
