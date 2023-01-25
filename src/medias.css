@@ -1,28 +1,35 @@
 
-@media (max-width: 480px) {
+
   
-   #root{
-      background-color: #D6D8DE;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
     }
+
+    @media only screen and (min-width: 320px) and (max-width: 576px){
+ 
+    #root {
+      background-color: #D6D8DE;
+      height: auto; 
+      /* display: flex;
+      justify-content: flex-start;
+      flex-direction: row-reverse;*/
+  } 
+    
 
   .contenedor-padre {
   
-   height: 116vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   height: 100vh;
+   width: 49vh;
+  
   }
 
   .contenedor-hijo {
       
    height: 95vh;
-   flex-direction: column;
-   position: absolute;
-   align-items: center;
+   display: flex;
+   flex-wrap: wrap;
   }
 
 
@@ -42,6 +49,13 @@
    height: 20vh;
    width: 50vh;
    margin: 2% 0 8% 0;
+ }
+
+ .contenedorForm{
+   height: 55vh;
+   width: 42vh;
+   display: flex;
+   flex-direction: column;
  }
 
  h1{
