@@ -28,7 +28,7 @@
 
  .divImgContainer{
   height: 55vh;
-  width: 91vh;
+  width: 58vh;
    display: flex;
    justify-content: flex-start;
    margin: 11% 0 10% 0;
@@ -40,7 +40,7 @@
  }
 
  img{
-width: 10%;
+width: 11%;
 height: 10%;
  }
 
@@ -157,7 +157,7 @@ h2{
   justify-content: space-around;
  }
  .btnCopiar, .btnLimpiar{
-  height: 63%;
+  height: 68%;
   width: 37%;
    margin-top: 5%;
    border-radius: 40px;

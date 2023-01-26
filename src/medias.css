@@ -1,33 +1,22 @@
-
-
-  
-   *{
-      margin: 0px;
-      padding: 0px;
-      box-sizing: border-box;
-    }
-
-    @media only screen and (min-width: 320px) and (max-width: 576px){
- 
-    #root {
+@media (max-width: 414px) {
+   /*Contenedor creado desde el HTML*/
+   #root {
       background-color: #D6D8DE;
-      height: auto; 
-      /* display: flex;
-      justify-content: flex-start;
-      flex-direction: row-reverse;*/
-  } 
+      height: 108vh;
+      width: 50vh;
+   }
     
 
   .contenedor-padre {
   
-   height: 100vh;
-   width: 49vh;
+   height: 107vh;
+   width: 50vh;
   
   }
 
   .contenedor-hijo {
       
-   height: 95vh;
+   height: 100vh;
    display: flex;
    flex-wrap: wrap;
   }
