@@ -1,9 +1,12 @@
-### 1. "Cipher"
+### Proyecto Cipher: "Passure"
 
 Primer proyecto "Cipher" refactorizado, luego de haber finalizado el bootcamp de programación front-end en "Laboratoria" cohort SCL021
 
+### 2. Prototipo de alta fidelidad
 
-### 2. Definición del producto
+![Prototipo de alta fidelidad](https://github.com/Ajbravoc/SCL021-cipher/blob/main/Prototipo%20de%20alta%20fidelidad.png)
+
+### 3. Definición del producto
 
 Los usuarios para este proyecto son principalmente adultos de +35 años.
 
