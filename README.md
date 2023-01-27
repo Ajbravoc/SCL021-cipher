@@ -4,7 +4,7 @@ Primer proyecto "Cipher" refactorizado, luego de haber finalizado el bootcamp de
 
 ### 2. Prototipo de alta fidelidad
 
-![Prototipo de alta fidelidad](https://github.com/Ajbravoc/SCL021-cipher/blob/main/._Prototipo%20de%20alta%20fidelidad.png)
+![Prototipo de alta fidelidad](https://github.com/Ajbravoc/SCL021-cipher/blob/main/Prototipo%20de%20alta%20fidelidad.png)
 
 ### 3. Definición del producto
 
