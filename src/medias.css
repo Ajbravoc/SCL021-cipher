@@ -16,8 +16,8 @@
   .contenedor-hijo {
       
    height: 100%;
-   display: flex;
-   flex-wrap: wrap;
+   /* display: flex;
+   flex-wrap: wrap; */
   }
 
 
@@ -43,9 +43,9 @@
 
  .contenedorForm{
  
-   width: 42vh;
+   width: 38vh;
    display: flex;
-   flex-direction: column;
+   justify-content: flex-start;
  }
 
  h1{
@@ -56,8 +56,21 @@
    font-size: 5vh;
  }
 
+ h5{
+   margin: 2% 0% 12% 0;
+   width: 86%;
+ }
+
+ .contenedorClave{
+   margin-bottom: 12%;
+ }
  .contenedorFunciones{
-   height: 94%;
+   height: 100%;
+   width: 83%;
+ }
+
+ .inputCifrado{
+   margin: 0 5% 0 4%;
  }
 
 h2{
@@ -69,25 +82,28 @@ h2{
 }
 
 #boton{
-   height: 9%;
+   height: 56%;
 }
 .contenedorBtns{
-   width: 100%;
+   width: 92%;
    display: flex;
    flex-direction: column-reverse;
-   align-content: space-around;
+   /* align-content: space-around; */
    flex-wrap: wrap;
+   align-items: center;
 }
 
-
+.contenedorPassEye{
+   display: flex;
+    flex-wrap: wrap;
+}
 .password, .passCiphered{
-   width: 95%;
+   width: 85%;
    padding: 3% 0 2% 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #6a88a4;
-  outline: 0px;
-  height: 11%;
+   background: none;
+   border: none;
+   border-bottom: 1px solid #6a88a4;
+   outline: 0px;
  }
 
 .btnCopiar, .btnLimpiar{

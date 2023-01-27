@@ -10,7 +10,7 @@
   }
 
  .contenedor-padre{
-    height: 100vh;
+    height: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
 
  img{
 width: 11%;
-height: 10%;
+height: 57%;
  }
 
  .contenedorFunciones{
@@ -111,13 +111,21 @@ h2{
    margin: 2% 0% 4% 0;
 
  }
+.boton{
+  height: 56%;
+}
+ .contenedorPassEye{
+  display: flex;
+  flex-wrap: wrap;
+ }
 .password, .passCiphered{
-   width: 95%;
+   width: 84%;
    padding: 3% 0 2% 0;
-  background: none;
+  /* background: none; */
   border: none;
   border-bottom: 1px solid #6a88a4;
   outline: 0px;
+
  }
 
  .contenedorClave{

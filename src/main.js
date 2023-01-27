@@ -54,10 +54,15 @@ form.setAttribute("method", "post");
 form.setAttribute("action", "submit.php");
 contenedorForm.appendChild(form);
 
+//Contenedor form
+const contenedorPassEye = document.createElement("div");
+contenedorPassEye.classList.add("contenedorPassEye");
+contenedorForm.appendChild(contenedorPassEye);
+
 //Titulo escribe contraseña
 const escribeContraseña = document.createElement("p");
 escribeContraseña.textContent = "Escribe tu contraseña";
-contenedorForm.appendChild(escribeContraseña);
+contenedorPassEye.appendChild(escribeContraseña);
 
 // Input contraseña
 export const password = document.createElement("input"); //cmd + click sobre el nombre me lleva al origen 
@@ -69,15 +74,19 @@ password.setAttribute(
 );
 password.setAttribute("maxlength", "8");
 password.setAttribute("minlength", "4");
-contenedorForm.appendChild(password);
+contenedorPassEye.appendChild(password);
 
 
 //Ojo contraseña
 export const img = document.createElement("img");
 img.setAttribute("id", "boton");
+img.setAttribute(
+  "type",
+  "image",
+);
 img.setAttribute("src", "imgs/cerrar-ojo.png");
 img.alt = "ojo cerrado";
-contenedorForm.appendChild(img);
+contenedorPassEye.appendChild(img);
 
 //Detalle de password
 const instruContra = document.createElement("h5");
@@ -91,7 +100,7 @@ contenedorForm.appendChild(contenedorClave);
 
 //Titulo clave
 const clave = document.createElement("p");
-clave.textContent = "Clave";
+clave.textContent = "Inserta un número";
 contenedorClave.appendChild(clave);
 
 // Input cifrado con numeros
