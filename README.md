@@ -1,4 +1,4 @@
-### 1. "Cipher"
+### Proyecto Cipher: "Passure"
 
 Primer proyecto "Cipher" refactorizado, luego de haber finalizado el bootcamp de programación front-end en "Laboratoria" cohort SCL021
 
